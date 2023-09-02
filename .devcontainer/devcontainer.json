@@ -15,7 +15,7 @@
 	// "forwardPorts": []
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "/opt/conda/bin/conda init && /opt/conda/bin/pip install -e /workspaces/package/ && /opt/conda/bin/pip install ipython ipykernel jupyter",
+	"postCreateCommand": "/opt/conda/bin/conda init && /opt/conda/bin/pip install -e /workspaces/colaboration_template/ && /opt/conda/bin/pip install ipython ipykernel jupyter",
 	
 	// Configure tool-specific properties.
 	"customizations": {
