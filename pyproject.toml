@@ -4,7 +4,6 @@ build-backend = "hatchling.build"
 
 [project]
 name = "package"
-version = "0.0.1"
 dependencies = [
   "numpy",
   "matplotlib",
@@ -13,6 +12,7 @@ dependencies = [
   "scipy>=1.11.2",
   "py4DSTEM @ git+https://github.com/py4dstem/py4DSTEM.git@dev"
 ]
+dynamic = ["version"]
 
 [tool.setuptools.dynamic]
 version = {attr = "package.__version__"}
@@ -32,7 +32,7 @@ scipy = ">=1.11.2"
 allow-direct-references = true
 
 [tool.hatch.version]
-path = "src/strained_cbeds/__init__.py"
+path = "src/package/__init__.py"
 
 [tool.black]
 line-length = 88
