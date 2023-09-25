@@ -13,6 +13,7 @@ dependencies = [
   "scipy>=1.11.2",
   "py4DSTEM @ git+https://github.com/py4dstem/py4DSTEM.git@dev"
 ]
+dynamic = ["version"]
 
 [tool.setuptools.dynamic]
 version = {attr = "package.__version__"}
