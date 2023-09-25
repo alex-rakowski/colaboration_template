@@ -14,6 +14,9 @@ dependencies = [
   "py4DSTEM @ git+https://github.com/py4dstem/py4DSTEM.git@dev"
 ]
 
+[tool.setuptools.dynamic]
+version = {attr = "package.__version__"}
+
 [tool.hatchling.requires]
 python = ">=3.10"
 
@@ -27,6 +30,9 @@ scipy = ">=1.11.2"
 
 [tool.hatch.metadata]
 allow-direct-references = true
+
+[tool.hatch.version]
+path = "src/strained_cbeds/__init__.py"
 
 [tool.black]
 line-length = 88
