@@ -1,11 +1,11 @@
-name: Bump version on PR merged
+name: Bump version
 on:
-  pull_request:
-    types: [closed]
-
+  workflow_run:
+    workflows: ["install checker quick"]
+    types:
+      - completed
 jobs:
   bump-version:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
