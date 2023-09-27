@@ -1,6 +1,5 @@
 name: Install Checker Quick
 on: 
-  push:
   pull_request:
 jobs:
 
